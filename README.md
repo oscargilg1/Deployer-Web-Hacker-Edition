@@ -8,3 +8,12 @@ The script requires one of these flags:
 -w : Install wordlists only.
 -p : Install PoCs only.
 -h : Display help message.
+
+# Credits to people who make amazing tools
+- https://github.com/projectdiscovery
+- https://github.com/tomnomnom
+- https://github.com/danielmiessler
+- https://github.com/lc
+- https://github.com/swisskyrepo
+- https://github.com/maurosoria
+- https://github.com/zmap
