@@ -62,7 +62,7 @@ fullInstall () {
 	go get -u github.com/tomnomnom/assetfinder
 	go get github.com/tomnomnom/waybackurls
 	go get -u github.com/iamstoxe/urlgrab
-	echo "export PATH='~/go/bin/:$PATH' | tee -a ~/.bashrc
+	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
 	source ~/.bashrc
 	git clone https://github.com/defparam/smuggler.git
 	git clone https://github.com/devanshbatham/ParamSpider
@@ -90,6 +90,8 @@ liteInstall () {
 	go get -u -v github.com/lc/gau
 	go get github.com/ffuf/ffuf
 	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
+	source ~/.bashrc
 	nuclei -update-templates
 	echo "Enjoy! :) "
 }
