@@ -34,7 +34,7 @@ getDependencies () {
 }
 
 helpMessage () {
-	echo "Usage: sudo ./deployer-web.sh -<installation type>"
+	echo "Usage: ./deployer-web.sh -<installation type>"
 	echo "Instalation types: "
 	echo "-f : Install all the tools, wordlists and popular PoCs"
 	echo "-l : Install most popular tools"
