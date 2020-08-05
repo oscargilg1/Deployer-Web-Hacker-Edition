@@ -60,6 +60,8 @@ fullInstall () {
 	go get -u github.com/tomnomnom/assetfinder
 	go get github.com/tomnomnom/waybackurls
 	go get -u github.com/iamstoxe/urlgrab
+	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
+	source ~/.bashrc
 	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 	nuclei -update-templates
 	go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
@@ -67,8 +69,6 @@ fullInstall () {
 	go get -u -v github.com/projectdiscovery/dnsprobe
 	apt-get install amass
 	git clone https://github.com/maurosoria/dirsearch.git
-	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
-	source ~/.bashrc
 	git clone https://github.com/defparam/smuggler.git
 	git clone https://github.com/devanshbatham/ParamSpider
 	pip3 install -r ParamSpider/requirements.txt
