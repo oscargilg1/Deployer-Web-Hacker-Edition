@@ -53,19 +53,19 @@ fullInstall () {
 	cd dalfox && go install
 	cd ..
 	pip3 install shodan
-	go get -u github.com/projectdiscovery/httpx/cmd/httpx
-	go get -u github.com/projectdiscovery/subfinder/cmd/subfinder
-	go get github.com/hakluke/hakrawler
-	go get -u github.com/tomnomnom/meg
-	go get -u github.com/tomnomnom/assetfinder
-	go get github.com/tomnomnom/waybackurls
-	go get -u github.com/iamstoxe/urlgrab
+	go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+	go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
+	go get -u -v github.com/hakluke/hakrawler
+	go get -u -v github.com/tomnomnom/meg
+	go get -u -v github.com/tomnomnom/assetfinder
+	go get -u -v github.com/tomnomnom/waybackurls
+	go get -u -v github.com/iamstoxe/urlgrab
 	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
 	source ~/.bashrc
 	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 	nuclei -update-templates
 	go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-	go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
+	go get -u -v github.com/projectdiscovery/chaos-client/cmd/chaos
 	go get -u -v github.com/projectdiscovery/dnsprobe
 	apt-get install amass
 	git clone https://github.com/maurosoria/dirsearch.git
@@ -88,7 +88,7 @@ liteInstall () {
 	go get -u github.com/projectdiscovery/subfinder/cmd/subfinder 
 	go get -u github.com/projectdiscovery/httpx/cmd/httpx
 	go get -u -v github.com/lc/gau
-	go get github.com/ffuf/ffuf
+	go get -u -v github.com/ffuf/ffuf
 	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
 	source ~/.bashrc
