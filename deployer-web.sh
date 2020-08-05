@@ -62,6 +62,8 @@ fullInstall () {
 	go get -u github.com/tomnomnom/assetfinder
 	go get github.com/tomnomnom/waybackurls
 	go get -u github.com/iamstoxe/urlgrab
+	echo "export PATH='~/go/bin/:$PATH' | tee -a ~/.bashrc
+	source ~/.bashrc
 	git clone https://github.com/defparam/smuggler.git
 	git clone https://github.com/devanshbatham/ParamSpider
 	pip3 install -r ParamSpider/requirements.txt
