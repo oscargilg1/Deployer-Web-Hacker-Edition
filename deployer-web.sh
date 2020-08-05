@@ -55,13 +55,18 @@ fullInstall () {
 	pip3 install shodan
 	go get -u github.com/projectdiscovery/httpx/cmd/httpx
 	go get -u github.com/projectdiscovery/subfinder/cmd/subfinder
-	apt-get install amass
-	git clone https://github.com/maurosoria/dirsearch.git
 	go get github.com/hakluke/hakrawler
 	go get -u github.com/tomnomnom/meg
 	go get -u github.com/tomnomnom/assetfinder
 	go get github.com/tomnomnom/waybackurls
 	go get -u github.com/iamstoxe/urlgrab
+	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+	nuclei -update-templates
+	go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
+	go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
+	go get -u -v github.com/projectdiscovery/dnsprobe
+	apt-get install amass
+	git clone https://github.com/maurosoria/dirsearch.git
 	echo "export PATH='~/go/bin/:$PATH'" | tee -a ~/.bashrc
 	source ~/.bashrc
 	git clone https://github.com/defparam/smuggler.git
@@ -69,12 +74,7 @@ fullInstall () {
 	pip3 install -r ParamSpider/requirements.txt
 	git clone --recursive https://github.com/FortyNorthSecurity/EyeWitness.git
 	EyeWitness/Python/setup/./setup.sh
-	go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
-	nuclei -update-templates
 	apt-get install zmap
-	go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-	go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
-	go get -u -v github.com/projectdiscovery/dnsprobe
 	echo "[*] Downloading wordlists and pocs"
 	git clone --recursive https://github.com/danielmiessler/SecLists.git
 	git clone --recursive https://github.com/swisskyrepo/PayloadsAllTheThings.git
